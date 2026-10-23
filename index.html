@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC8 - Trang Chủ Chính Thức ABC8</title>
+    <!-- Tích hợp thư viện Icon FontAwesome miễn phí -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Liên kết file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Mobile: Menu Icon -->
+            <div class="mobile-menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Logo (Dùng hình ảnh image_bb561b.png) -->
+            <div class="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="ABC8 VIP">
+                </a>
+            </div>
+
+            <!-- Desktop: Khu vực thông tin & Đăng nhập -->
+            <div class="desktop-header-right">
+                <div class="timezone-display">
+    Múi giờ Việt Nam: <span id="vn-time">Đang tải...</span>
+    <img src="images/vn.jpg" alt="VN" class="flag-icon">
+</div>
+                <div class="auth-buttons">
+                    <button class="btn btn-login">ĐĂNG NHẬP</button>
+                    <button class="btn btn-register">
+                        ĐĂNG KÝ
+                        <span class="badge">+68K</span>
+                    </button>
+                    <button class="btn btn-trial">ĐĂNG KÝ TRẢI NGHIỆM</button>
+                </div>
+            </div>
+
+            <!-- Mobile: App Icon (Dùng hình ảnh image_bb561e.png) -->
+            <div class="mobile-app-icon">
+                <a href="#">
+                    <img src="images/app.png" alt="App">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVIGATION (Chỉ hiển thị trên Desktop) -->
+    <nav class="main-nav">
+        <ul class="nav-list">
+            <!-- Thêm class "active-nav" để đổi màu vàng cho Trang chủ -->
+            <li><a href="#" class="active-nav"><i class="fa-solid fa-house"></i> TRANG CHỦ</a></li>
+            <li><a href="#"><i class="fa-solid fa-coins"></i> NỔ HŨ</a></li> 
+            <li><a href="#"><i class="fa-solid fa-fish"></i> BẮN CÁ</a></li>
+            <li><a href="#"><i class="fa-solid fa-layer-group"></i> GAME BÀI 3D</a></li>
+            <li><a href="#"><i class="fa-solid fa-compact-disc"></i> CASINO</a></li>
+            <li><a href="#"><i class="fa-solid fa-futbol"></i> THỂ THAO</a></li>
+            <li><a href="#"><i class="fa-solid fa-dharmachakra"></i> XỔ SỐ</a></li>
+            <li><a href="#"><i class="fa-solid fa-kiwi-bird"></i> ĐÁ GÀ</a></li>
+            <li><a href="#"><i class="fa-solid fa-gift"></i> KHUYẾN MÃI</a></li>
+            <li><a href="#"><i class="fa-solid fa-table-cells"></i> APP</a></li>
+            <li><a href="#"><i class="fa-solid fa-crown"></i> VIP</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake"></i> ĐẠI LÝ</a></li>
+            <li><a href="#"><i class="fa-solid fa-award"></i> THƯƠNG HIỆU</a></li>
+        </ul>
+    </nav>
+
+    <!-- BANNER SLIDER -->
+    <section class="banner-slider">
+        <div class="slider-track" id="slider-track">
+            <!-- Hình 1 -->
+            <img src="images/banner1.png" alt="Banner 1" class="slide">
+            <!-- Hình 2 -->
+            <img src="images/banner2.png" alt="Banner 2" class="slide">
+            <!-- Hình 3  -->
+            <img src="images/banner3.jpg" alt="Banner 3" class="slide">
+            <!-- Hình 4  -->
+            <img src="images/banner4.png" alt="Banner 4" class="slide">
+            <!-- Hình 5  -->
+            <img src="images/banner5.png" alt="Banner 5" class="slide">
+            <!-- Hình 6  -->
+            <img src="images/banner6.jpg" alt="Banner 6" class="slide">
+        </div>
+    </section> 
+    <!-- DANH MỤC NỔI BẬT (CHỈ HIỂN THỊ TRÊN PC) -->
+    <section class="desktop-featured-categories">
+        <div class="featured-container">
+            
+
+            <!-- Dải danh mục (ở giữa) -->
+            <div class="featured-list">
+                <!-- Thẻ 1: NỔ HŨ -->
+                <a href="#" class="featured-card">
+                    <img src="images/pc-1.png" alt="Nổ Hũ">
+                </a>
+
+                <!-- Thẻ 2: BẮN CÁ -->
+                <a href="#" class="featured-card">
+                    <!-- Thay bằng ảnh tương ứng -->
+                    <img src="images/pc-2.png" alt="Bắn Cá">
+                </a>
+
+                <!-- Thẻ 3: THỂ THAO -->
+                <a href="#" class="featured-card">
+                     <!-- Thay bằng ảnh tương ứng -->
+                    <img src="images/pc-3.png" alt="Thể Thao">
+                </a>
+
+                <!-- Thẻ 4: CASINO -->
+                <a href="#" class="featured-card">
+                     <!-- Thay bằng ảnh tương ứng -->
+                    <img src="images/pc-4.png" alt="Casino">
+                </a>
+
+                <!-- Thẻ 5: GAME BÀI -->
+                <a href="#" class="featured-card">
+                     <!-- Thay bằng ảnh tương ứng -->
+                    <img src="images/pc-5.png" alt="Game Bài">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- NÚT ĐĂNG NHẬP / ĐĂNG KÝ (CHỈ DÀNH CHO MOBILE) -->
+    <div class="mobile-auth-bar">
+        <!-- Nút Đăng nhập sử dụng hình nền image_bc45fe.png -->
+        <a href="#" class="mobile-btn-login">
+            <span>Đăng nhập</span>
+        </a>
+        
+        <!-- Nút Đăng ký sử dụng hình nền image_bc4601.png -->
+        <a href="#" class="mobile-btn-register">
+            <span>Đăng Ký</span>
+            <!-- Biểu tượng +68K (Có thể dùng ảnh nhỏ hoặc CSS) -->
+            <div class="gift-icon">+68K</div>
+        </a>
+    </div>
+    <!-- MOBILE SCROLL MENU (Chỉ hiển thị trên điện thoại) -->
+    <nav class="mobile-scroll-menu">
+        <ul class="scroll-menu-list">
+            <!-- Mục nổi bật (HOT NHẤT) -->
+            <li>
+                <a href="#">
+                    <div class="icon-circle highlight"><i class="fa-solid fa-fire"></i></div>
+                    <span>HOT NHẤT</span>
+                </a>
+            </li>
+            <!-- Các mục khác -->
+            <li>
+                <a href="#">
+                    <div class="icon-circle"><i class="fa-solid fa-compact-disc"></i></div>
+                    <span>CASINO</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-circle"><i class="fa-solid fa-fish"></i></div>
+                    <span>BẮN CÁ</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-circle"><i class="fa-solid fa-coins"></i></div>
+                    <span>NỔ HŨ</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-circle"><i class="fa-solid fa-layer-group"></i></div>
+                    <span>GAME BÀI</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-circle"><i class="fa-solid fa-futbol"></i></div>
+                    <span>THỂ THAO</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-circle"><i class="fa-solid fa-dharmachakra"></i></div>
+                    <span>XỔ SỐ</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="icon-circle"><i class="fa-solid fa-kiwi-bird"></i></div>
+                    <span>ĐÁ GÀ</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+   <!-- MAIN CONTENT (Danh sách game - Mobile) -->
+    <main class="game-container">
+        <div class="game-grid">
+            <!-- Game 1 -->
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/1.png" alt="SE Trực Tuyến">
+                </div>
+                <div class="game-title">SE Trực Tuyến</div>
+            </a>
+            
+            <!-- Game 2 -->
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <!-- Thay bằng tên file ảnh Game 2 của bạn -->
+                    <img src="images/2.png" alt="DG Trực Tuyến">
+                </div>
+                <div class="game-title">DG Trực Tuyến</div>
+            </a>
+
+            <!-- Game 3 -->
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <!-- Thay bằng tên file ảnh Game 3 của bạn -->
+                    <img src="images/3.png" alt="EVO Trực Tuyến">
+                </div>
+                <div class="game-title">EVO Trực Tuyến</div>
+            </a>
+
+            <!-- Game 4 -->
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/4.png" alt="Kho Báu Aztec">
+                </div>
+                <div class="game-title">Kho Báu Aztec</div>
+            </a>
+
+            <!-- Game 5 -->
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/5.png" alt="Đường Mạt Chược">
+                </div>
+                <div class="game-title">Đường Mạt Chược</div>
+            </a>
+
+            <!-- Game 6 -->
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/6.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Đường Mạt Chược 2</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/7.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Neko May Mắn</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/8.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">QUYẾT CHIẾN TIỀN.</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/9.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Thắng Mạt Chược</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/10.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Siêu Cấp Ace</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/11.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Để Quốc Hoàng Kim</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/12.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Quyền Vương</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/13.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Bảo Thạch Kala</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/14.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Cực Tốc 777</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/15.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Trâu Rừng Xung Phon.</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/16.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Giàu Có 1 Lần</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/17.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Tết Nguyên Đán</div>
+            </a>
+            <a href="#" class="game-card">
+                <div class="game-image-wrapper">
+                    <img src="images/18.png" alt="Đường Mạt Chược 2">
+                </div>
+                <div class="game-title">Chúc Mừng Năm</div>
+            </a>
+
+        </div>
+    </main>
+    <!-- BOTTOM NAVIGATION (Chỉ hiện trên Mobile) -->
+    <nav class="bottom-nav">
+        <a href="#" class="active"><i class="fa-solid fa-house"></i><span>Trang Chủ</span></a>
+        <a href="#"><i class="fa-solid fa-wallet"></i><span>Nạp - Rút</span></a>
+        <a href="#"><i class="fa-solid fa-gift"></i><span>Khuyến mãi</span></a>
+        <a href="#"><i class="fa-solid fa-headset"></i><span>CSKH 24/7</span></a>
+        <a href="#"><i class="fa-solid fa-user"></i><span>Thành viên</span></a>
+    </nav>
+    <!-- MODAL ĐĂNG NHẬP -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+            
+           <!-- Khu vực hình ảnh Logo và Đại sứ (Đã tách riêng) -->
+            <div class="modal-banner">
+                <!-- Hình Logo -->
+                <img src="images/logo-form.png" alt="ABC8 VIP" class="modal-logo">
+                
+                <p class="brand-title">ĐẠI SỨ THƯƠNG HIỆU ABCVIP<br>NĂM 2025 - 2026</p>
+                
+                <!-- Hình Đại sứ -->
+                <img src="images/person2.png" alt="Đại sứ thương hiệu" class="modal-ambassador">
+            </div>
+
+            <form class="auth-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <i class="fa-solid fa-user icon-left text-red"></i>
+                    <input type="text" placeholder="Tên Đăng Nhập">
+                </div>
+                <div class="form-group">
+                    <i class="fa-solid fa-lock icon-left text-red"></i>
+                    <input type="password" placeholder="Mật Khẩu">
+                    <i class="fa-solid fa-eye-slash icon-right"></i>
+                </div>
+                <!-- Trường số điện thoại thêm vào form đăng nhập -->
+                <div class="form-group">
+                    <i class="fa-solid fa-phone icon-left text-red"></i>
+                    <input type="tel" placeholder="Số Điện Thoại">
+                </div>
+                
+                <div class="form-options">
+                    <label><input type="checkbox" checked> Lưu mật khẩu và tài khoản của bạn</label>
+                </div>
+
+                <button type="submit" class="btn-submit">ĐĂNG NHẬP</button>
+                <div class="switch-form">
+                    Bạn chưa có tài khoản <a href="#" id="switch-to-register">[ĐĂNG KÝ]</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL ĐĂNG KÝ -->
+    <div id="register-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal"><i class="fa-solid fa-xmark"></i></span>
+            
+            <!-- Khu vực hình ảnh Logo và Đại sứ (Đã tách riêng) -->
+            <div class="modal-banner">
+                <!-- Hình Logo -->
+                <img src="images/logo-form.png" alt="ABC8 VIP" class="modal-logo">
+                
+                <p class="brand-title">ĐỐI TÁC THƯƠNG HIỆU ABCVIP<br>NĂM 2025 - 2026</p>
+                
+                <!-- Hình Đại sứ -->
+                <img src="images/person3.png" alt="Đối tác thương hiệu" class="modal-ambassador">
+            </div>
+
+            <form class="auth-form" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <input type="text" placeholder="Tên Đăng Nhập" style="padding-left: 15px;">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Mật Khẩu Thành Viên" style="padding-left: 15px;">
+                    <i class="fa-solid fa-eye icon-right"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Họ Tên Thật" style="padding-left: 15px;">
+                </div>
+                <div class="form-group phone-group">
+                    <div class="phone-prefix">
+                        <img src="images/vn.jpg" alt="VN" class="small-flag"> +84
+                    </div>
+                    <input type="tel" placeholder="Số Điện Thoại">
+                </div>
+                
+                <div class="form-options">
+                    <label><input type="checkbox" checked> Tôi đã đọc và đồng ý <a href="#" class="text-red">"Thỏa thuận đăng ký"</a></label>
+                </div>
+
+                <button type="submit" class="btn-submit">ĐĂNG KÝ NGAY</button>
+                <div class="switch-form">
+                    Bạn đã có tài khoản <a href="#" id="switch-to-login">"ĐĂNG NHẬP"</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Liên kết file Script -->
+    <script src="script.js"></script>
+</body>
+</html>

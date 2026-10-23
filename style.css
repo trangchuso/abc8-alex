@@ -1,0 +1,710 @@
+/* Reset CSS cơ bản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #2b1d1d; /* Màu nền tối giống trong ảnh */
+    color: #fff;
+    padding-bottom: 60px; /* Chừa khoảng trống cho bottom nav trên mobile */
+}
+
+/* =========================================
+   HEADER - CHUNG (MOBILE FIRST)
+   ========================================= */
+.header {
+    background-color: #151515; 
+    border-bottom: 2px solid #333; 
+    
+    /* Các thuộc tính thêm vào để ghim header */
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* Đảm bảo header luôn nổi lên trên các thành phần khác như banner, lưới game */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Định dạng Logo hình ảnh */
+.logo img {
+    height: 35px; /* Chiều cao logo trên điện thoại */
+    width: auto;
+    display: block;
+}
+
+/* Định dạng Icon App hình ảnh trên điện thoại */
+.mobile-app-icon img {
+    height: 35px;
+    width: auto;
+    display: block;
+}
+
+.mobile-menu-icon {
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Ẩn các thành phần desktop trên mobile */
+.desktop-header-right {
+    display: none; 
+}
+
+/* Ẩn các thành phần desktop trên mobile */
+.desktop-header-right, .main-nav {
+    display: none; 
+}
+
+/* Các thành phần Mobile */
+.mobile-menu-icon, .mobile-app-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* =========================================
+   BANNER SLIDER
+   ========================================= */
+.banner-slider {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden; /* Ẩn phần hình ảnh tràn ra ngoài */
+    position: relative;
+    background-color: #151515;
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out; /* Hiệu ứng trượt mượt mà */
+}
+
+.slide {
+    min-width: 100%; /* Mỗi hình chiếm 100% chiều rộng khung chứa */
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.banner h2 {
+    font-size: 32px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   CỤM NÚT ĐĂNG NHẬP/ĐĂNG KÝ CHO MOBILE
+   ========================================= */
+.mobile-auth-bar {
+    display: flex;
+    width: 100%;
+    height: 45px; /* Chiều cao cố định cho thanh nút */
+    background-color: #fff; /* Nền dự phòng */
+}
+
+/* Kiểu dáng chung cho 2 nút trên mobile */
+.mobile-auth-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    position: relative;
+    /* Dùng background-size và background-position để ảnh nền bao phủ toàn bộ và khớp với góc xéo */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Nút Đăng nhập (Bên trái) */
+.mobile-btn-login {
+    width: 55%; /* Chiếm nhiều diện tích hơn một chút do góc xéo hướng sang phải */
+    color: #fff;
+    background-image: url('images/log.png');
+    background-position: right center; /* Căn lề phải để thấy rõ góc xéo */
+    padding-right: 15px; /* Đẩy chữ qua trái một chút để tránh góc xéo */
+}
+
+/* Nút Đăng ký (Bên phải) */
+.mobile-btn-register {
+    width: 45%;
+    color: #cc0000; /* Màu chữ đỏ */
+    background-image: url('images/reg.png');
+    background-position: left center; /* Căn lề trái để khớp với góc xéo */
+    padding-left: 10px;
+}
+
+/* CSS mô phỏng biểu tượng quà tặng +68K */
+.gift-icon {
+    margin-left: 5px;
+    background-color: #ffcc00;
+    color: #cc0000;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px solid #cc0000;
+    font-style: italic;
+    /* Hiệu ứng bóng để giống hình ảnh gốc hơn */
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+/* =========================================
+   MOBILE SCROLL MENU
+   ========================================= */
+.mobile-scroll-menu {
+    width: 100%;
+    /* Sử dụng hình ảnh nền được cung cấp */
+    background-image: url('images/game_bg.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 12px 0;
+}
+
+.scroll-menu-list {
+    display: flex;
+    overflow-x: auto; /* Kích hoạt cuộn ngang */
+    list-style: none;
+    padding: 0 15px;
+    margin: 0;
+    gap: 45px; /* Khoảng cách giữa các icon */
+    
+    /* Ẩn thanh cuộn (scrollbar) để giao diện đẹp hơn */
+    scrollbar-width: none; /* Dành cho Firefox */
+    -ms-overflow-style: none;  /* Dành cho IE và Edge */
+}
+
+/* Ẩn thanh cuộn trên Chrome, Safari, Opera */
+.scroll-menu-list::-webkit-scrollbar {
+    display: none; 
+}
+
+.scroll-menu-list li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap; /* Ngăn chữ bị rớt dòng */
+}
+
+/* Vòng tròn bọc ngoài icon */
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #fff; /* Viền trắng giống bản gốc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Định dạng riêng cho mục HOT NHẤT (viền đỏ, icon màu cam/vàng) */
+.icon-circle.highlight {
+    border-color: #ff0000;
+}
+.icon-circle.highlight i {
+    background: linear-gradient(to bottom, #ffcc00, #ff3300);
+    -webkit-background-clip: text;
+    background-clip: text; /* Bổ sung thuộc tính tiêu chuẩn này */
+    -webkit-text-fill-color: transparent;
+    font-size: 24px;
+}
+
+
+/* =========================================
+   GAME GRID (MOBILE)
+   ========================================= */
+.game-container {
+    padding: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-grid {
+    display: grid;
+    /* Giao diện mobile hiển thị 3 cột đều nhau */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Khoảng cách giữa các ô game */
+}
+
+.game-card {
+    text-decoration: none;
+    display: block; /* Đổi từ flex sang block */
+    position: relative; /* Thêm thuộc tính này để làm mốc cho tên game */
+    border-radius: 12px;
+    overflow: hidden; /* Giữ lại để cắt bo tròn góc cho cả ảnh và nền chữ */
+    background-color: #ff3300; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.2s; 
+}
+
+.game-card:active {
+    transform: scale(0.95); 
+}
+
+/* Phần bao quanh hình ảnh */
+.game-image-wrapper {
+    width: 100%;
+    /* Tăng tỷ lệ từ 100% lên 110% hoặc 115% để khung hình hơi dọc, giống bản gốc hơn */
+    padding-top: 115%; 
+    position: relative;
+    background-color: #1a1a1a;
+}
+
+.game-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Phần chữ tên game */
+.game-title {
+    position: absolute; /* Rút chữ lên và đặt đè lên hình ảnh */
+    bottom: 0; /* Neo chặt xuống dưới đáy của game-card */
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo padding không làm méo khung */
+    
+    background: linear-gradient(to bottom, #ff503f, #cc0000); 
+    color: #fff;
+    font-size: 11px; 
+    font-weight: bold;
+    text-align: center;
+    padding: 7px 4px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    z-index: 2; /* Đảm bảo lớp chữ luôn nổi lên trên cùng */
+}
+
+/* BOTTOM NAVIGATION (MOBILE) */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1E0A06;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    z-index: 100;
+}
+.bottom-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+}
+.bottom-nav a i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.bottom-nav a.active {
+    color: #ff3300;
+}
+/* =========================================
+   DANH MỤC NỔI BẬT (Chỉ hiện trên PC, ẩn trên Mobile)
+   ========================================= */
+.desktop-featured-categories {
+    display: none; 
+    background-color: #3b1b17; /* Màu nền nâu sậm */
+    padding: 20px 0;
+    width: 100%;
+}
+/* =========================================
+   MEDIA QUERY CHO GIAO DIỆN MÁY TÍNH (PC)
+   ========================================= */
+@media (min-width: 768px) {
+    body {
+        padding-bottom: 0; 
+    }
+    
+    /* Ẩn các thành phần riêng của Mobile */
+    .mobile-auth-bar,
+    .mobile-scroll-menu,
+    .mobile-menu-icon, 
+    .mobile-app-icon, 
+    .bottom-nav {
+        display: none;
+    }
+
+    /* 1. ĐIỀU CHỈNH HEADER & LOGO */
+    .logo img {
+        height: 60px;
+    }
+
+    .desktop-header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    /* Đã gộp .timezone-display không bị lặp */
+    .timezone-display {
+        font-size: 13px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        gap: 6px; 
+    }
+
+    .flag-icon {
+        width: 20px; 
+        height: auto;
+        border-radius: 2px; 
+        box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    /* 2. CỤM NÚT BẤM */
+    .auth-buttons {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+    .btn {
+        padding: 8px 18px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 13px;
+        cursor: pointer;
+        position: relative; 
+    }
+    .btn-login, .btn-trial {
+        background: linear-gradient(to bottom, #ff503f, #e03c31);
+        color: #fff;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .btn-register {
+        background-color: #f2f2f2;
+        color: #b52017;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    .badge {
+        position: absolute;
+        top: -10px;
+        right: -15px;
+        background: linear-gradient(to right, #992313, #d33520);
+        color: #ffdf8c;
+        font-size: 11px;
+        padding: 2px 6px;
+        border-radius: 10px;
+        border: 1px solid #ffdf8c;
+        font-weight: bold;
+        z-index: 2;
+    }
+
+    /* 3. HIỂN THỊ NAVIGATION NGANG CHO PC */
+    .main-nav {
+        display: block;
+        background: linear-gradient(to bottom, #ff5722, #cc0000); 
+        border-bottom: 2px solid #a30000;
+    }
+    
+    .nav-list {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        list-style: none;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .nav-list li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 20px; 
+        font-size: 12px; 
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+        text-transform: uppercase;
+        white-space: nowrap; 
+    }
+
+    .nav-list li a i {
+        font-size: 30px; 
+        margin-bottom: 6px;
+    }
+
+    .nav-list li a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-list li a.active-nav,
+    .nav-list li a.active-nav i {
+        color: #ffcc00; 
+    }
+
+    /* 4. ĐIỀU CHỈNH KÍCH THƯỚC BANNER CHO PC */
+    .banner-slider {
+        max-width: 100%; 
+    }
+
+    .slide {
+        width: 100%;
+        max-height: 700px; 
+        object-fit: cover; 
+        object-position: center; 
+    }
+
+    /* 5. HIỂN THỊ DANH MỤC NỔI BẬT CHO PC (Vừa tạo ở bước trước) */
+    .desktop-featured-categories {
+        display: block; 
+    }
+    .featured-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+    }
+    .featured-promo-btn {
+        margin-right: 30px;
+        flex-shrink: 0; 
+    }
+    .featured-promo-btn img {
+        height: auto;
+        width: 120px;
+        display: block;
+    }
+    .featured-list {
+        display: flex;
+        justify-content: center;
+        gap: 25px; 
+        flex-grow: 1; 
+    }
+    .featured-card {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    .featured-card:hover {
+        transform: translateY(-5px); 
+    }
+    .featured-card img {
+        width: auto;
+        height: 200px; 
+        display: block;
+    }
+
+    /* 6. CHỈNH LẠI GAME GRID CHO PC */
+    .game-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+    }
+    .game-card {
+        height: 180px;
+    }
+}
+/* =========================================
+   POPUP MODAL (ĐĂNG NHẬP / ĐĂNG KÝ)
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none; /* Ẩn mặc định */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Nằm trên tất cả giao diện */
+}
+
+/* Kích hoạt hiển thị */
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 12px;
+    position: relative;
+    padding: 20px 25px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.close-modal:hover {
+    color: #fff;
+}
+
+/* Căn giữa toàn bộ nội dung trong khu vực Banner của Modal */
+.modal-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Định dạng riêng cho Logo */
+.modal-logo {
+    width: 80%; /* Chiếm 80% chiều rộng của Modal */
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Chữ tiêu đề giới thiệu đại sứ */
+.brand-title {
+    font-size: 11px;
+    color: #ccc;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Định dạng riêng cho Hình Đại sứ */
+.modal-ambassador {
+    width: 90%; 
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px; /* Nếu ảnh đại sứ có viền cần bo cong */
+}
+
+/* Định dạng Form */
+.auth-form .form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.auth-form input {
+    width: 100%;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 25px;
+    padding: 12px 40px; /* Chừa chỗ cho icon */
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+}
+
+.auth-form input:focus {
+    border-color: #ff3300;
+}
+
+/* Icons trong input */
+.icon-left {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+.icon-right {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #aaa;
+    cursor: pointer;
+}
+.text-red {
+    color: #ff3300;
+}
+
+/* Nhóm số điện thoại đăng ký (+84) */
+.phone-group {
+    display: flex;
+    background-color: #2b2b2b;
+    border: 1px solid #444;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.phone-group .phone-prefix {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 13px;
+    border-right: 1px solid #444;
+}
+.phone-group .small-flag {
+    width: 16px;
+    margin-right: 5px;
+}
+.phone-group input {
+    border: none;
+    border-radius: 0;
+    padding-left: 15px;
+}
+
+/* Checkbox & Options */
+.form-options {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.form-options label {
+    cursor: pointer;
+}
+.form-options input[type="checkbox"] {
+    accent-color: #007bff;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Nút Submit */
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(to right, #ff0000, #cc0000);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.switch-form {
+    text-align: center;
+    font-size: 13px;
+}
+.switch-form a {
+    color: #ff3300;
+    text-decoration: none;
+    font-weight: bold;
+}
